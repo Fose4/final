@@ -11,3 +11,21 @@ int CheckArray(string[] array, int length)
     return result;
 }
 
+int numbers = CheckArray(ArrayStrings, length); 
+string[] newArrayStrings = new string[numbers]; 
+
+NewArray(ArrayStrings, newArrayStrings, length);
+void NewArray(string[] oldArray, string[] newArray, int lengthLimit)
+{
+    int temp = 0;
+    for (int i = 0; i < oldArray.Length; i++)
+    {
+        if (oldArray[i].Length <= lengthLimit)
+        {
+            newArray[temp] = oldArray[i];
+            temp++;
+        }
+    }
+}
+
+
